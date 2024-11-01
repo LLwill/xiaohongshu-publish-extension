@@ -1,0 +1,22 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "images/icon128.png",
+         "16": "images/icon16.png",
+         "48": "images/icon48.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "./js/background.js",
+      "type": "module"
+   },
+   "description": "使用 Dify WorkFlow 创作发布小红书",
+   "host_permissions": [ "https://creator.xiaohongshu.com/*" ],
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApr9TsGzwFxkTKC3TAmxL0SjLQmI1mp47pL4f2UuRUjeXCAteH7Be6uNg5im2OQLmoSIf11cEaa2TnewOOYXGoHHgt7zIt3tNOtjux1+m/LHVLxUCxrCmfR+II/eyj8deQa5CJa+M00CIe8oYITlQ+wGSItyNfj+NavFbAZE8duV8/Dn6Liel8OfB3Cw5QWo07v3ouul2ZJRKIUX56GfVfAaf8A2D8r80zISGTt9DLOaH8aJxaCJDNC64IhRJYY5mZaDttXhpI5mlFUdthurmAoD89MdBy6a4wtNpSdVXOcMlOW88CWRK19Cpq+YF2IbZfqTvl1/vR59UttQPJ2NmDwIDAQAB",
+   "manifest_version": 3,
+   "name": "小红书自动发布助手",
+   "permissions": [ "activeTab", "scripting", "storage", "downloads" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

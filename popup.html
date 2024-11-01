@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>小红书自动发布助手</title>
+  <link rel="stylesheet" href="./css/theme.css">
+</head>
+<body class="extension-body">
+  <header class="extension-header">
+    <h1 class="extension-title">小红书自动发布助手</h1>
+  </header>
+
+  <main class="extension-main">
+    <form id="configForm" class="config-form">
+      <div class="form-group">
+        <div class="label-wrapper">
+          <label for="difyApiKey" class="form-label">Dify API Key:</label>
+          <a class="link" href="https://www.beansmile.com/blog/share-dify-xiaohongshu-operation-workflow-dsl?utm_source=google-chrome&utm_medium=web&utm_campaign=xhs-extension+" target="_blank">
+            不会操作？查看Dify工作流DSL示例
+          </a>
+        </div>
+        <div class="input-wrapper">
+          <input type="password" id="difyApiKey" class="input-field" required>
+          <button type="button" id="togglePassword" class="toggle-password">🙈</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="publishDirectly" class="checkbox-label">
+          <input type="checkbox" id="publishDirectly" class="checkbox-input">
+          直接发布
+        </label>
+      </div>
+
+      <div class="section-title-wrapper">
+        <h2 class="section-title">内容生成</h2>
+        <div class="clear" id="clear-content">🗑️ 清空</div>
+      </div>
+
+      <div class="form-group">
+        <label for="basicInstruction" class="form-label">☝️ 请简单描述主题要求:</label>
+        <textarea id="basicInstruction" class="textarea-field" required placeholder="例如：分享一家好吃的餐厅✨"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="backgroundDetail" class="form-label">📝 请补充必要的背景信息，帮助 AI 推理 (可选):</label>
+        <textarea id="backgroundDetail" class="textarea-field" placeholder="例如：安静的环境，有露台可以看风景"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="style" class="form-label">🎨 请输入正文语气风格:</label>
+        <input type="text" id="style" class="input-field" placeholder="例如：生动的">
+      </div>
+
+      <button type="submit" id="generate" class="submit-button">生成</button>
+    </form>
+
+    <div id="status" class="status-message"></div>
+  </main>
+
+  <div id="loading" class="loading-overlay">
+    <div class="loading-spinner"></div>
+    <div class="loading-text" id="loading-text">正在生成内容，请稍候...</div>
+  </div>
+
+  <!-- 添加调试区域 -->
+  <!-- <div id="debugArea">
+    <h3>调试信息</h3>
+    <pre id="debugLog"></pre>
+  </div> -->
+
+
+  <footer class="extension-footer">
+    <p class="footer-text">
+      made by <a href="https://www.beansmile.com/?utm_source=google-chrome&utm_medium=web&utm_campaign=xhs-extension+" target="_blank" class="link">Beansmile</a>
+      &nbsp;v1.0.0
+    </p>
+  </footer>
+
+  <script src="./js/popup.js"></script>
+</body>
+</html>
